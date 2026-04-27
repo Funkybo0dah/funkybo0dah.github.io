@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Geopolitical Intelligence — Jason Yung</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #111;
+      background: #fff;
+      line-height: 1.6;
+    }
+
+    /* ── Nav ── */
+    nav {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 28px 24px 0;
+    }
+
+    nav a {
+      font-size: 0.9em;
+      color: #888;
+      text-decoration: none;
+    }
+
+    nav a:hover { color: #111; }
+
+    nav a::before { content: "← "; }
+
+    /* ── Hero ── */
+    .hero {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 24px 40px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .hero .tag {
+      font-size: 0.75em;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #888;
+      margin-bottom: 12px;
+    }
+
+    .hero h1 {
+      font-size: 2em;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      font-size: 1.05em;
+      color: #444;
+      max-width: 540px;
+    }
+
+    /* ── How it works ── */
+    .how {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 24px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .how h2 {
+      font-size: 0.75em;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #888;
+      margin-bottom: 28px;
+    }
+
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 32px 1fr;
+      gap: 16px;
+      align-items: start;
+    }
+
+    .step-num {
+      width: 32px;
+      height: 32px;
+      border: 1.5px solid #ddd;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85em;
+      font-weight: 600;
+      color: #888;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .step-body h3 {
+      font-size: 1em;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .step-body p {
+      font-size: 0.9em;
+      color: #555;
+    }
+
+    .step-body code {
+      background: #f4f4f4;
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-size: 0.88em;
+      font-family: ui-monospace, monospace;
+    }
+
+    /* ── CTA ── */
+    .cta {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 24px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .cta h2 {
+      font-size: 0.75em;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #888;
+      margin-bottom: 20px;
+    }
+
+    .cta-box {
+      border: 1.5px solid #111;
+      padding: 28px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    @media (max-width: 520px) {
+      .cta-box { flex-direction: column; align-items: flex-start; }
+    }
+
+    .cta-box p {
+      font-size: 0.95em;
+      color: #444;
+    }
+
+    .cta-box p strong {
+      display: block;
+      font-size: 1.05em;
+      color: #111;
+      margin-bottom: 4px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #111;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 24px;
+      font-size: 0.9em;
+      font-weight: 600;
+      white-space: nowrap;
+      transition: background 0.15s;
+      flex-shrink: 0;
+    }
+
+    .btn:hover { background: #333; }
+
+    /* ── Sample brief ── */
+    .sample {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    .sample h2 {
+      font-size: 0.75em;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #888;
+      margin-bottom: 20px;
+    }
+
+    .brief-preview {
+      background: #f7f7f7;
+      border-left: 3px solid #111;
+      padding: 24px;
+      font-size: 0.9em;
+    }
+
+    .brief-preview .brief-header {
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .brief-preview ol {
+      padding-left: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      color: #333;
+    }
+
+    .brief-preview .commentary {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid #ddd;
+      font-size: 0.9em;
+      color: #666;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Back</a>
+  </nav>
+
+  <div class="hero">
+    <div class="tag">Tool</div>
+    <h1>Your daily geopolitical intelligence briefing</h1>
+    <p>An AI analyst monitors global news around the clock and delivers a concise, personalised briefing to your Telegram every morning — focused on the topics that matter to you.</p>
+  </div>
+
+  <div class="how">
+    <h2>How it works</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h3>Open Telegram</h3>
+          <p>Search for <code>@jasonintelbot</code> and start a conversation.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h3>Send your topics</h3>
+          <p>Message the bot with <code>/start</code> followed by the topics you want monitored — e.g. <em>"Middle East conflicts, Federal Reserve policy, AI regulation"</em>.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h3>Receive your brief every morning</h3>
+          <p>At 7 AM daily, the analyst sends you 3 intelligence bullets drawn from overnight news — scoped to your topics. Reply with follow-up questions anytime.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <h3>Opt out anytime</h3>
+          <p>Send <code>/stop</code> to the bot at any time to unsubscribe instantly. No questions asked.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta">
+    <h2>Get started</h2>
+    <div class="cta-box">
+      <p>
+        <strong>Free during beta</strong>
+        Open Telegram and message @jasonintelbot to enrol. Takes 30 seconds.
+      </p>
+      <a class="btn" href="https://t.me/jasonintelbot">Open in Telegram</a>
+    </div>
+  </div>
+
+  <div class="sample">
+    <h2>Example brief</h2>
+    <div class="brief-preview">
+      <div class="brief-header">🌍 Morning Brief — Sun, 27 Apr 2026</div>
+      <ol>
+        <li>The Federal Reserve held rates at 4.25% amid mixed jobs data, with Chair Powell signalling no cuts before Q3 as core PCE remains above the 2% target.</li>
+        <li>Israeli and Hamas negotiators met in Cairo for a third round of ceasefire talks, with Qatar mediating over a proposed 60-day pause and hostage exchange framework.</li>
+        <li>The EU's AI Act enforcement body fined a major US foundation model provider €40M for failing to disclose training data provenance under Article 53.</li>
+      </ol>
+      <div class="commentary">These three stories converge on a single theme: institutions under pressure. Central banks, mediators, and regulators are all being tested by the pace of change — and their responses in the next 90 days will set the tone for the rest of the year.</div>
+    </div>
+  </div>
+
+</body>
+</html>
